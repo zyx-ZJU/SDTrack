@@ -199,7 +199,7 @@ def parse_opt():
     parser.add_argument('--tracking_method', type=str, default='strongsort', help='deepocsort, botsort, strongsort, ocsort, bytetrack, sparsetrack')
     parser.add_argument('--reid_model', default=WEIGHTS / 'mobilenetv2_x1_4.pt', help="Path to the ReID model")
     parser.add_argument('--device', default=0, help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
-    parser.add_argument('--sequence_dir', default='C:/Users/zhao/Desktop/project/MOT_challenge/MOT17/train/MOT17-02-FRCNN', help="Path to MOTChallenge sequence directory")
+    parser.add_argument('--sequence_dir', default='', help="Path to MOTChallenge sequence directory")
     parser.add_argument('--detection_file', default='data/MOT17_val_YOLOX+BoT/MOT17-02-FRCNN.npy', help="Path to custom detections")
     parser.add_argument('--output_file', default=EXAMPLES / 'runs', help="Path to the tracking output file. This file will contain the tracking results on completion")
     parser.add_argument('--min_confidence', default=0.6, type=float, help="Detection confidence threshold. Disregard all detections that have a confidence lower than this value.")
